@@ -1,14 +1,18 @@
-body { 
-  background-color: rgb(235, 235, 235);
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Roboto:wght@300&display=swap');
+
+html { 
+  background-color: rgba(235, 235, 235, 0.383);
+  font-family: 'Coming Soon', cursive;
+  font-family: 'Roboto', sans-serif;
 }
 .card {
   position: absolute;
-  transform: rotate(-3deg);
   transition: transform 0.5s;
-  width: 90%;
+  width: 93%;
   z-index: 0;
   height: 80vh;
   box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.102);
+  filter: url(#roughpaper);
 }
 
 .card.next {
@@ -39,6 +43,10 @@ body {
 
 }
 
+p.card-text { 
+  font-size: 18px;
+}
+
 .date {
   text-align: center;
   color: white;
@@ -59,14 +67,14 @@ body {
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px;
+  padding-top: 6px;
   background-color: #a4e2f7;
 }
 
 .message {
-  width: 70%;
-  max-width: 85%;
-  margin: 10px 0;
-  padding: 10px;
+  width: 88%;
+  margin: 3px 0;
+  padding: 8px;
   border-radius: 10px;
   border: 1px solid gray;
 }
@@ -80,6 +88,11 @@ body {
   align-self: flex-start;
 }
 
+.material-symbols-sharp { 
+  margin-top: 60px;
+  font-size: 40px;
+}
+
 .right {
   background: lightgreen;
   align-self: flex-end;
@@ -87,4 +100,14 @@ body {
 
 .shadow { 
   box-shadow: 10px 15px 10px black;
+}
+
+#swipe-img { 
+  width: 60px;
+}
+
+.card-title { 
+  color: rgb(61, 60, 60);
+  border-bottom: 2px solid gray;
+  padding-bottom: 6px;
 }

@@ -5,47 +5,54 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swipeable Stacked Cards</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container h-100 mt-5 d-flex justify-content-center align-items-center">
+  <div class="container h-100 mt-3 d-flex justify-content-center align-items-center">
     <div class="row w-100">
       <div class="col-12 w-100">
         <div class="card-container" id="cardContainer">
 
           <!-- Card -->
+          <!-- Start -->
           <div class="card card-top" id="currentCard">
             <div class="card-body">
-              <h2 class="card-title">Jelo bonita</h2>
-              <img src="/pictures/luchy.png" alt="" class="mt-4 shadow">
-              <h3 class="card-text mt-5 text-center">Swipe left or right</h3>
+              <img src="/pictures/nosotros.png" alt="" class="mt-4">
+              <h2 class="card-title my-2">Algo que decirte...</h2>
+              <p class="card-text">Para Lucía</p>
+              <p class="card-text">Con mucho amor, Diego</p>
+              <span class="material-symbols-sharp align-self-end">
+                swipe
+              </span>
             </div>
           </div>
 
           <!-- Card -->
           <div class="card next">
             <div class="card-body">
-              <h3 class="card-title">Eres bien buena onda</h3>
-              <p class="card-text">
+              <h3 class="mt-0 card-title">Eres bien buena onda</h3>
+              <p class="card-text m-0">
                 Mis sentimiento favorito es la <b>nostalgia</b>, y quería
                 compartir ese sentimiento contigo. Recuerdo cuando te conocí,
                 hablamos mucho y recuerdo q dije en mi mente la Lucía es <i>bien buena onda</i>.
                 Me acuerdo que te pregunté que si te gustaban los boleros.
               </p>
               <img src="/pictures/Pic1.jpg" alt="" srcset="" class="ml-5 w-75 card-image">
-              <p class="card-description">
-                Mira tengo esta foto de esa noche, no estaba ebrio (depende).
+              <p class="card-description mb-0 text-center">
+                Foto de esa noche, no estaba ebrio (depende).
               </p>
             </div>
-            
+
           </div>
 
+          <!-- Card -->
+          <!-- Whatsapp convo -->
           <div class="card next">
             <div class="card-body">
-              <h3 class="card-title">First impressions: me enamoré</h3>
-              <p class="card-text">Aquí la conver con la fer el día después de conocerte.</p>
-
+              <h3 class="card-title mb-1 p-1">First impressions: me enamoré</h3>
               <div class="conversation shadow">
                 <div class="date mx-auto">Aug 5, 2022</div>
                 <div class="message left">
@@ -86,12 +93,9 @@
             </div>
           </div>
 
-          <div class="card next" style="height: 80vh; border: 3px solid white">
-            <div class="card-body">
-              <h3 class="card-title"></h3>
-              <p class="card-text"></p>
-            </div>
+          <div class="card next" style="height: 80vh;">
           </div>
+
         </div>
       </div>
     </div>
