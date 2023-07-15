@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swipeable Stacked Cards</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .card {
+      position: absolute;
+      transform: rotate(-3deg);
+      transition: transform 0.5s;
+      width: 90%;
+      z-index: 0;
+    }
+
+    .card.next {
+      transform: rotate(3deg);
+    }
+
+    .card.swipe-left {
+      transform: translateX(-100%) rotate(-3deg);
+    }
+
+    .card.swipe-right {
+      transform: translateX(100%) rotate(3deg);
+    }
+
+    .card-top {
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container h-100 mt-5 d-flex justify-content-center align-items-center">
+    <div class="row w-100">
+      <div class="col-12 w-100">
+        <div class="card-container" id="cardContainer">
+          <div class="card card-top" id="currentCard"> <!-- Added the new class -->
+            <div class="card-body">
+              <h5 class="card-title">Jelo Bonita</h5>
+              <p class="card-text">Quería contarte algo muy especial...</p>
+            </div>
+          </div>
+          <div class="card next">
+            <div class="card-body">
+              <h5 class="card-title">He aprendido</h5>
+              <p class="card-text">He aprendido que...</p>
+            </div>
+          </div>
+          <!-- Add as many cards as you want here -->
+          <div class="card next">
+            <div class="card-body">
+              <h5 class="card-title">Diego Carta 3</h5>
+              <p class="card-text">This is the next card.</p>
+            </div>
+          </div>
+
+          <div class="card next">
+            <div class="card-body">
+              <h5 class="card-title">Diego Carta 4</h5>
+              <p class="card-text">This is the next card.</p>
+            </div>
+          </div>
+
+          <div class="card next">
+            <div class="card-body">
+              <h5 class="card-title">Diego Carta 4</h5>
+              <p class="card-text">Quieres ser.</p>
+            </div>
+          </div>
+
+
+          <div class="card next" style="height: 100px;">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8/hammer.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <script>
+    var hammertime = new Hammer(document.getElementById('cardContainer'));
+    hammertime.on('swipeleft swiperight', function (ev) {
+      var currentCard = document.getElementById('currentCard');
+      var nextCards = document.querySelectorAll('.card.next');
+      if (nextCards.length == 0) return;
+      var nextCard = nextCards[0];
+
+      if (ev.type === 'swipeleft') {
+        currentCard.classList.add('swipe-left');
+      } else {
+        currentCard.classList.add('swipe-right');
+      }
+
+      currentCard.addEventListener('transitionend', function () {
+        currentCard.remove();
+        nextCard.id = 'currentCard';
+        nextCard.classList.remove('next');
+        nextCard.classList.add('card-top'); // Move the next card to the top
+      }, { once: true });
+    });
+  </script>
+</body>
+
+</html>
