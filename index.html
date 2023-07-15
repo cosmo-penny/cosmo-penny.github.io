@@ -5,31 +5,7 @@
   <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swipeable Stacked Cards</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <style>
-    .card {
-      position: absolute;
-      transform: rotate(-3deg);
-      transition: transform 0.5s;
-      width: 90%;
-      z-index: 0;
-    }
-
-    .card.next {
-      transform: rotate(3deg);
-    }
-
-    .card.swipe-left {
-      transform: translateX(-100%) rotate(-3deg);
-    }
-
-    .card.swipe-right {
-      transform: translateX(100%) rotate(3deg);
-    }
-
-    .card-top {
-      z-index: 1;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -37,44 +13,82 @@
     <div class="row w-100">
       <div class="col-12 w-100">
         <div class="card-container" id="cardContainer">
-          <div class="card card-top" id="currentCard"> <!-- Added the new class -->
+
+          <!-- Card -->
+          <div class="card card-top" id="currentCard">
             <div class="card-body">
-              <h5 class="card-title">Jelo Bonita</h5>
-              <p class="card-text">Quería contarte algo muy especial...</p>
+              <h2 class="card-title">Jelo bonita</h2>
+              <img src="/pictures/luchy.png" alt="" class="mt-4 shadow">
+              <h3 class="card-text mt-5 text-center">Swipe left or right</h3>
             </div>
           </div>
+
+          <!-- Card -->
           <div class="card next">
             <div class="card-body">
-              <h5 class="card-title">He aprendido</h5>
-              <p class="card-text">He aprendido que...</p>
+              <h3 class="card-title">Eres bien buena onda</h3>
+              <p class="card-text">
+                Mis sentimiento favorito es la <b>nostalgia</b>, y quería
+                compartir ese sentimiento contigo. Recuerdo cuando te conocí,
+                hablamos mucho y recuerdo q dije en mi mente la Lucía es <i>bien buena onda</i>.
+                Me acuerdo que te pregunté que si te gustaban los boleros.
+              </p>
+              <img src="/pictures/Pic1.jpg" alt="" srcset="" class="ml-5 w-75 card-image">
+              <p class="card-description">
+                Mira tengo esta foto de esa noche, no estaba ebrio (depende).
+              </p>
             </div>
+            
           </div>
-          <!-- Add as many cards as you want here -->
+
           <div class="card next">
             <div class="card-body">
-              <h5 class="card-title">Diego Carta 3</h5>
-              <p class="card-text">This is the next card.</p>
+              <h3 class="card-title">First impressions: me enamoré</h3>
+              <p class="card-text">Aquí la conver con la fer el día después de conocerte.</p>
+
+              <div class="conversation shadow">
+                <div class="date mx-auto">Aug 5, 2022</div>
+                <div class="message left">
+                  <div class="name">Fer bro</div>
+                  <div class="text">ya anden pues</div>
+                </div>
+
+                <div class="message right">
+                  <div class="name">Diego</div>
+                  <div class="text">
+                    ... fui muy feliz xq salimos y la pasamos cool y conoci a mi esposa pues 👀👀👀👀 ah no me dijo que
+                    le
+                    gustaba más este emoji 👁️👁️👁️👁️
+                  </div>
+                </div>
+
+                <div class="message left">
+                  <div class="name">Fer bro</div>
+                  <div class="text">
+                    JAJAJAJAJA si le gusta más ese emoji
+                  </div>
+                </div>
+
+                <div class="message left">
+                  <div class="name">Fer bro</div>
+                  <div class="text">
+                    me da gusto que la hayas pasado bien y que hayas conocido a tu esposaa (ya anden)
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="card next">
             <div class="card-body">
-              <h5 class="card-title">Diego Carta 4</h5>
-              <p class="card-text">This is the next card.</p>
-            </div>
-          </div>
-
-          <div class="card next">
-            <div class="card-body">
-              <h5 class="card-title">Diego Carta 4</h5>
+              <h3 class="card-title">Diego Carta 4</h3>
               <p class="card-text">Quieres ser.</p>
             </div>
           </div>
 
-
-          <div class="card next" style="height: 100px;">
+          <div class="card next" style="height: 80vh; border: 3px solid white">
             <div class="card-body">
-              <h5 class="card-title"></h5>
+              <h3 class="card-title"></h3>
               <p class="card-text"></p>
             </div>
           </div>

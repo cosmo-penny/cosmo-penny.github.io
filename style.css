@@ -1,0 +1,90 @@
+body { 
+  background-color: rgb(235, 235, 235);
+}
+.card {
+  position: absolute;
+  transform: rotate(-3deg);
+  transition: transform 0.5s;
+  width: 90%;
+  z-index: 0;
+  height: 80vh;
+  box-shadow: 5px 15px 5px rgba(0, 0, 0, 0.102);
+}
+
+.card.next {
+  transform: rotate(3deg);
+}
+
+.card.swipe-left {
+  transform: translateX(-100%) rotate(-3deg);
+}
+
+.card.swipe-right {
+  transform: translateX(100%) rotate(3deg);
+}
+
+.card-top {
+  z-index: 1;
+}
+
+.card-description { 
+  font-size: 12px;
+  color: gray;
+  font-style: italic;
+}
+
+.card-image {
+  border: 0.5px solid gray;
+  border-radius: 4px;
+
+}
+
+.date {
+  text-align: center;
+  color: white;
+  background-color: gray;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation { 
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #a4e2f7;
+}
+
+.message {
+  width: 70%;
+  max-width: 85%;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid gray;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.left {
+  background: white;
+  align-self: flex-start;
+}
+
+.right {
+  background: lightgreen;
+  align-self: flex-end;
+}
+
+.shadow { 
+  box-shadow: 10px 15px 10px black;
+}
