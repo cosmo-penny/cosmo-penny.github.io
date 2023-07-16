@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Roboto:wght@300&display=swap');
 
 html {
-  background-color: #F5FFFA;
+  background-color: #2D2D2D;
   /* Other colors I like: 
     - #2D2D2D -> dark gray 
     - #FEEBC8 -> pastel yellow
@@ -118,6 +118,10 @@ p.card-text {
 
 #map { 
   max-width: 100% !important;
+}
+
+.iframe-height { 
+  height: 80px;
 }
 
 .right {
